@@ -1,22 +1,8 @@
 import random
 import time
 
-bytes_sent = 31
 
-try:
-    import psutils
-    # Get the stats of bytes sent
-    bytes_sent = psutil.net_io_counters()
-except ImportError:
-    pass
-
-# Get the current time in milliseconds
-current_time = int(time.time() * 1000)
-
-# Combine the IP address and time in milliseconds to create a seed
-# value
-
-seed_value = bytes_sent + current_time
+seed_value = time.time_ns()
 
 random.seed(seed_value)
 
