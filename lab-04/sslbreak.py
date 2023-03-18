@@ -15,7 +15,7 @@ def find_microsecond(second, challenge):
     challenge -- the observed challenge (in bytestring form)
     """
     for i in range(0,1000000):
-        rc = sslkey.RNGC(seconds=seconds, microseconds=i)
+        rc = sslkey.RNGC(seconds=second, microseconds=i)
         rc.create_key()
         if rc.challenge == challenge:
             return (i, rc.secret_key)
