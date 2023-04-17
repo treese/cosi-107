@@ -1,4 +1,4 @@
-Th# Test cases for COSI 107a Lab 6 - TinySSl
+# Test cases for COSI 107a Lab 6 - TinySSl
 
 import unittest
 

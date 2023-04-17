@@ -4,4 +4,4 @@ all:
 	echo "Nothing to do for all; perhaps you want make test"
 
 test:
-	python -m unittest
+	python3 -m unittest
