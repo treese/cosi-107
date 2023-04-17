@@ -20,8 +20,8 @@ class RecordFormatTestCase(unittest.TestCase):
                          "Length of data does not match header")
 
     def test_receive_record_basic(self):
-        expected = b'\x80\x18This is yet another test'
-        test_data = 'This is yet another test'.encode()
+        test_data = b'\x80\x18This is yet another test'
+        expected = 'This is yet another test'.encode()
         result = self.tsclient.decode_record(test_data)
         self.assertEqual(result, expected,
                          "Unexpected data")
